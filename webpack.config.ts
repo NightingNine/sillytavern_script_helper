@@ -8,6 +8,10 @@ import url from 'node:url';
 import { Server } from 'socket.io';
 import TerserPlugin from 'terser-webpack-plugin';
 import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
+<<<<<<< HEAD
+=======
+import { VueLoaderPlugin } from 'vue-loader';
+>>>>>>> c8f3da9ae541a6b83883ab66845fed7d8ce79639
 import webpack from 'webpack';
 const require = createRequire(import.meta.url);
 const HTMLInlineCSSWebpackPlugin = require('html-inline-css-webpack-plugin').default;
@@ -82,7 +86,11 @@ function parse_configuration(entry: Entry): (_env: any, argv: any) => webpack.Co
       }),
     );
   }
+<<<<<<< HEAD
   plugins.push({ apply: watch_it });
+=======
+  plugins.push({ apply: watch_it }, new VueLoaderPlugin());
+>>>>>>> c8f3da9ae541a6b83883ab66845fed7d8ce79639
 
   return (_env, argv) => ({
     experiments: {
@@ -110,6 +118,14 @@ function parse_configuration(entry: Entry): (_env: any, argv: any) => webpack.Co
     module: {
       rules: [
         {
+<<<<<<< HEAD
+=======
+          test: /\.vue$/,
+          use: 'vue-loader',
+          exclude: /node_modules/,
+        },
+        {
+>>>>>>> c8f3da9ae541a6b83883ab66845fed7d8ce79639
           oneOf: [
             {
               test: /\.tsx?$/,
@@ -124,22 +140,38 @@ function parse_configuration(entry: Entry): (_env: any, argv: any) => webpack.Co
               },
               resourceQuery: /raw/,
               type: 'asset/source',
+<<<<<<< HEAD
+=======
+              exclude: /node_modules/,
+>>>>>>> c8f3da9ae541a6b83883ab66845fed7d8ce79639
             },
             {
               test: /\.(sa|sc)ss$/,
               use: ['postcss-loader', 'sass-loader'],
               resourceQuery: /raw/,
               type: 'asset/source',
+<<<<<<< HEAD
+=======
+              exclude: /node_modules/,
+>>>>>>> c8f3da9ae541a6b83883ab66845fed7d8ce79639
             },
             {
               test: /\.css$/,
               use: ['postcss-loader'],
               resourceQuery: /raw/,
               type: 'asset/source',
+<<<<<<< HEAD
+=======
+              exclude: /node_modules/,
+>>>>>>> c8f3da9ae541a6b83883ab66845fed7d8ce79639
             },
             {
               resourceQuery: /raw/,
               type: 'asset/source',
+<<<<<<< HEAD
+=======
+              exclude: /node_modules/,
+>>>>>>> c8f3da9ae541a6b83883ab66845fed7d8ce79639
             },
             {
               test: /\.tsx?$/,
