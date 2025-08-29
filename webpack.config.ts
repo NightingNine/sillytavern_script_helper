@@ -8,6 +8,10 @@ import url from 'node:url';
 import { Server } from 'socket.io';
 import TerserPlugin from 'terser-webpack-plugin';
 import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
+<<<<<<< HEAD
+=======
+import { VueLoaderPlugin } from 'vue-loader';
+>>>>>>> 28b9ac03a886a445c482a18ae90a7118806377fb
 import webpack from 'webpack';
 const require = createRequire(import.meta.url);
 const HTMLInlineCSSWebpackPlugin = require('html-inline-css-webpack-plugin').default;
@@ -82,7 +86,11 @@ function parse_configuration(entry: Entry): (_env: any, argv: any) => webpack.Co
       }),
     );
   }
+<<<<<<< HEAD
   plugins.push({ apply: watch_it });
+=======
+  plugins.push({ apply: watch_it }, new VueLoaderPlugin());
+>>>>>>> 28b9ac03a886a445c482a18ae90a7118806377fb
 
   return (_env, argv) => ({
     experiments: {
@@ -110,6 +118,14 @@ function parse_configuration(entry: Entry): (_env: any, argv: any) => webpack.Co
     module: {
       rules: [
         {
+<<<<<<< HEAD
+=======
+          test: /\.vue$/,
+          use: 'vue-loader',
+          exclude: /node_modules/,
+        },
+        {
+>>>>>>> 28b9ac03a886a445c482a18ae90a7118806377fb
           oneOf: [
             {
               test: /\.tsx?$/,
@@ -124,22 +140,38 @@ function parse_configuration(entry: Entry): (_env: any, argv: any) => webpack.Co
               },
               resourceQuery: /raw/,
               type: 'asset/source',
+<<<<<<< HEAD
+=======
+              exclude: /node_modules/,
+>>>>>>> 28b9ac03a886a445c482a18ae90a7118806377fb
             },
             {
               test: /\.(sa|sc)ss$/,
               use: ['postcss-loader', 'sass-loader'],
               resourceQuery: /raw/,
               type: 'asset/source',
+<<<<<<< HEAD
+=======
+              exclude: /node_modules/,
+>>>>>>> 28b9ac03a886a445c482a18ae90a7118806377fb
             },
             {
               test: /\.css$/,
               use: ['postcss-loader'],
               resourceQuery: /raw/,
               type: 'asset/source',
+<<<<<<< HEAD
+=======
+              exclude: /node_modules/,
+>>>>>>> 28b9ac03a886a445c482a18ae90a7118806377fb
             },
             {
               resourceQuery: /raw/,
               type: 'asset/source',
+<<<<<<< HEAD
+=======
+              exclude: /node_modules/,
+>>>>>>> 28b9ac03a886a445c482a18ae90a7118806377fb
             },
             {
               test: /\.tsx?$/,
@@ -236,7 +268,11 @@ function parse_configuration(entry: Entry): (_env: any, argv: any) => webpack.Co
           request.startsWith('-') ||
           request.startsWith('.') ||
           request.startsWith('/') ||
+<<<<<<< HEAD
           request.startsWith('@') ||
+=======
+          request.startsWith('@/') ||
+>>>>>>> 28b9ac03a886a445c482a18ae90a7118806377fb
           request.startsWith('http') ||
           path.isAbsolute(request) ||
           fs.existsSync(path.join(context, request)) ||
@@ -246,10 +282,19 @@ function parse_configuration(entry: Entry): (_env: any, argv: any) => webpack.Co
         }
 
         const builtin = {
+<<<<<<< HEAD
           lodash: '_',
           toastr: 'toastr',
           yaml: 'YAML',
           jquery: '$',
+=======
+          jquery: '$',
+          lodash: '_',
+          toastr: 'toastr',
+          vue: 'Vue',
+          'vue-router': 'VueRouter',
+          yaml: 'YAML',
+>>>>>>> 28b9ac03a886a445c482a18ae90a7118806377fb
           zod: 'z',
         };
         if (request in builtin) {
