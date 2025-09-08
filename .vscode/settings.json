@@ -17,4 +17,10 @@
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+<<<<<<< HEAD
+=======
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+>>>>>>> 05e7cfc26d3af3e1f237592280067dfc2662808b
 }
