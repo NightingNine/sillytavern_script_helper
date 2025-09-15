@@ -10,6 +10,14 @@ declare module '*.css' {
   const content: unknown;
   export default content;
 }
+<<<<<<< HEAD
+=======
+declare module '*.vue' {
+  import { DefineComponent } from 'vue';
+  const component: DefineComponent;
+  export default component;
+}
+>>>>>>> eea3fdb9001064d40a9b26593495d8cc9f1bafcb
 
 declare const YAML: typeof import('yaml');
 
