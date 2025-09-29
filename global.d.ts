@@ -2,6 +2,13 @@ declare module '*?raw' {
   const content: string;
   export default content;
 }
+<<<<<<< HEAD
+=======
+declare module '*?url' {
+  const content: string;
+  export default content;
+}
+>>>>>>> e9ae68bd98da447436c9fcf3fdf61223e32a1336
 declare module '*.html' {
   const content: string;
   export default content;
@@ -10,6 +17,14 @@ declare module '*.css' {
   const content: unknown;
   export default content;
 }
+<<<<<<< HEAD
+=======
+declare module '*.vue' {
+  import { DefineComponent } from 'vue';
+  const component: DefineComponent;
+  export default component;
+}
+>>>>>>> e9ae68bd98da447436c9fcf3fdf61223e32a1336
 
 declare const YAML: typeof import('yaml');
 
