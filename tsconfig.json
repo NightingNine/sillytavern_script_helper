@@ -13,11 +13,15 @@
     "module": "ESNext",
     "outDir": "dist",
     "baseUrl": "src",
+<<<<<<< HEAD
     "paths": {
       "@/*": [
         "./*",
       ]
     },
+=======
+    "paths": {},
+>>>>>>> 65aefa8574099c7eebb104f617f2f658cfe72b9b
     "moduleDetection": "auto",
     "moduleResolution": "bundler",
     "allowUmdGlobalAccess": true,
@@ -27,6 +31,10 @@
     "checkJs": false,
     "sourceMap": true,
     "strict": true,
+<<<<<<< HEAD
+=======
+    "jsx": "react-jsx",
+>>>>>>> 65aefa8574099c7eebb104f617f2f658cfe72b9b
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
@@ -37,10 +45,18 @@
   "include": [
     "@types",
     "src",
+<<<<<<< HEAD
     "global.d.ts",
+=======
+    "*.d.ts",
+>>>>>>> 65aefa8574099c7eebb104f617f2f658cfe72b9b
   ],
   "exclude": [
     "**/dist/**",
     "**/node_modules/**",
   ]
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 65aefa8574099c7eebb104f617f2f658cfe72b9b
