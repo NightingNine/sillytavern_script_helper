@@ -8,3 +8,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+<<<<<<< HEAD
+=======
+
+auto-imports.d.ts
+components.d.ts
+>>>>>>> 640d7d7c3f446a2c95904767cd9075c4284f5111
